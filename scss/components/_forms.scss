@@ -1,0 +1,128 @@
+.item-form {
+  font-family: $font-primary;
+}
+
+.sheet-header {
+  flex: 0 auto;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  margin-bottom: 10px;
+
+  .profile-img {
+    flex: 0 0 100px;
+    height: 100px;
+    margin-right: 10px;
+  }
+
+  .header-fields {
+    flex: 1;
+
+    .resources .resource {
+      .resource-content {
+
+        height: 30px;
+        justify-content: center;
+
+        .rollable-dice {
+          background-image: url("/systems/vaultsofrustrim/assets/dice-grey.svg") !important;
+          cursor: pointer;
+        }
+        .rollable-dice:hover {
+          background-image: url("/systems/vaultsofrustrim/assets/dice-black.svg") !important;
+        }
+        .generate-health {
+          flex-basis: 30px;
+          flex-grow: 0;
+          background-size: contain;
+          background-repeat: no-repeat;
+        }
+      }
+    }
+  }
+
+  h1.charname {
+    height: 50px;
+    padding: 0px;
+    margin: 5px 0;
+    border-bottom: 0;
+    input {
+      width: 100%;
+      height: 100%;
+      margin: 0;
+    }
+  }
+}
+
+.sheet-tabs {
+  flex: 0;
+}
+
+.sheet-body,
+.sheet-body .tab,
+.sheet-body .tab .editor {
+  height: 100%;
+
+  .complete-chargen-container {
+    justify-content: flex-end;
+  }
+  .rollable-d20 {
+    background-image: url("/icons/svg/d20-grey.svg") !important;
+    cursor: pointer;
+  }
+  .rollable-d20:hover {
+    background-image: url("/icons/svg/d20-black.svg") !important;
+  }
+  .rollable-d6 {
+    background-image: url("/icons/svg/d6-grey.svg") !important;
+    cursor: pointer;
+  }
+  .rollable-d6:hover {
+    background-image: url("/systems/vaultsofrustrim/assets/d6-black.svg") !important;
+  }
+  .rollable-dice {
+    background-image: url("/systems/vaultsofrustrim/assets/dice-grey.svg") !important;
+    cursor: pointer;
+  }
+  .rollable-dice:hover {
+    background-image: url("/systems/vaultsofrustrim/assets/dice-black.svg") !important;
+  }
+  .ability-name {
+    text-indent: 8px;
+    text-align: left;
+    overflow: hidden;
+    height: 30px;
+    margin: 0;
+    line-height: 30px;
+    flex-basis: 90px;
+    font-weight: bold;
+  }
+  .ability-rollable {
+    flex-basis: 30px;
+    flex-grow: 0;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  .generate-ability {
+    flex-basis: 30px;
+    flex-grow: 0;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  .ability-bonus {
+    text-align: center;
+  }
+}
+
+.tox {
+  .tox-editor-container {
+    background: $c-white;
+  }
+
+  .tox-edit-area {
+    padding: 0 8px;
+  }
+}

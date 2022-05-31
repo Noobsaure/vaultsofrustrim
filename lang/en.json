@@ -1,0 +1,22 @@
+{
+  "VAULTSOFRUSTRIM.AbilityStr": "Force",
+  "VAULTSOFRUSTRIM.AbilityCon": "Constitution",
+  "VAULTSOFRUSTRIM.AbilityDex": "Dexterité",
+  "VAULTSOFRUSTRIM.AbilityInt": "Intellect",
+  "VAULTSOFRUSTRIM.AbilityPsy": "Psyché",
+  "VAULTSOFRUSTRIM.AbilityEgo": "Égo",
+
+  "VAULTSOFRUSTRIM.AbilityStrAbbr": "str",
+  "VAULTSOFRUSTRIM.AbilityConAbbr": "con",
+  "VAULTSOFRUSTRIM.AbilityDexAbbr": "dex",
+  "VAULTSOFRUSTRIM.AbilityIntAbbr": "int",
+  "VAULTSOFRUSTRIM.AbilityPsyAbbr": "psy",
+  "VAULTSOFRUSTRIM.AbilityEgoAbbr": "ego",
+
+  "VAULTSOFRUSTRIM.EffectCreate": "Create Effect",
+  "VAULTSOFRUSTRIM.EffectToggle": "Toggle Effect",
+  "VAULTSOFRUSTRIM.EffectEdit": "Edit Effect",
+  "VAULTSOFRUSTRIM.EffectDelete": "Delete Effect",
+
+  "VAULTSOFRUSTRIM.Add": "Add"
+}

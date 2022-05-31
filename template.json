@@ -1,0 +1,90 @@
+{
+  "Actor": {
+    "types": ["character", "npc"],
+    "templates": {
+      "base": {
+        "health": {
+          "value": 5,
+          "min": 0,
+          "max": 5
+        },
+        "hd": 1,
+        "biography": ""
+      }
+    },
+    "character": {
+      "templates": ["base"],
+      "xp": 0,
+      "abilities": {
+        "str": {
+          "name": "Force",
+          "value": 0
+        },
+        "int": {
+          "name": "Intellect",
+          "value": 0
+        },
+        "dex": {
+          "name": "Dextérité",
+          "value": 0
+        },
+        "psy": {
+          "name": "Psyché",
+          "value": 0
+        },
+        "con": {
+          "name": "Constitution",
+          "value": 0
+        },
+        "ego": {
+          "name": "Égo",
+          "value": 0
+        }
+      },
+      "new": {
+        "str": true,
+        "int": true,
+        "dex": true,
+        "psy": true,
+        "con": true,
+        "ego": true,
+        "health": true,
+        "gear1": true,
+        "gear2": true,
+        "bonusGear": true
+      },
+      "chargenComplete": false
+    },
+    "npc": {
+      "templates": ["base"],
+      "cr": 0
+    }
+  },
+  "Item": {
+    "types": ["weapon", "armor", "item", "spell"],
+    "templates": {
+      "base": {
+        "description": ""
+      }
+    },
+    "weapon": {
+      "templates": ["base"],
+      "slots": 1,
+      "damage": "1d6",
+      "hands": 1
+    },
+    "armor": {
+      "templates": ["base"],
+      "slots": 2,
+      "armor": 1
+    },
+    "item": {
+      "templates": ["base"],
+      "quantity": 1,
+      "slots": 0
+    },
+    "spell": {
+      "templates": ["base"]
+    }
+  }
+}

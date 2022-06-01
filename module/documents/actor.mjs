@@ -47,16 +47,35 @@ export class VaultsOfRustrimActor extends Actor {
 
     // Make modifications to data here. For example:
     const data = actorData.data;
+    var enc = 0;
+    var mods = {
+      "str": 0,
+      "int": 0,
+      "dex": 0,
+      "psy": 0,
+      "con": 0,
+      "ego": 0
+    };
+
+    for (let i of actorData.items) {
+      if (i.type === 'armor' || i.type === 'weapon' || i.type === 'item' || i.type === 'effect') {
+        enc += i.data.data.slots;
+        if (i.type === 'effect') {
+          for (let [ability, value] of Object.entries(i.data.data.abilities)) {
+            mods[ability] = mods[ability] + value;
+          }
+        }
+      }
+    }
 
     // Loop through ability scores, and add their modifiers to our sheet output.
     for (let [key, ability] of Object.entries(data.abilities)) {
-      // Calculate the modifier using d20 rules.
-      // ability.mod = Math.floor((ability.value - 10) / 2);
+      ability.mod = ability.value + mods[key];
     }
 
     data.encumbrance = {};
     data.encumbrance.max = 10 + data.abilities.con.value;
-    data.encumbrance.value = 0;
+    data.encumbrance.value = enc;
   }
 
   /**

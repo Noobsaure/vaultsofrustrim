@@ -61,7 +61,7 @@
     }
   },
   "Item": {
-    "types": ["weapon", "armor", "item", "spell"],
+    "types": ["weapon", "armor", "item", "spell", "effect"],
     "templates": {
       "base": {
         "description": ""
@@ -85,6 +85,18 @@
     },
     "spell": {
       "templates": ["base"]
+    },
+    "effect": {
+      "templates": ["base"],
+      "slots": 0,
+      "abilities": {
+        "str": 0,
+        "int": 0,
+        "dex": 0,
+        "psy": 0,
+        "con": 0,
+        "ego": 0
+      }
     }
   }
 }

@@ -83,24 +83,46 @@ export class VaultsOfRustrimActorSheet extends ActorSheet {
    * @return {undefined}
    */
   _prepareItems(context) {
+
+    function _getItemRank(item) {
+      var result = -1
+      switch (item.type) {
+        case 'effect':
+        result = 0;
+        break;
+        case 'armor':
+        result = 1;
+        break;
+        case 'weapon':
+        result = 2;
+        break;
+        case 'item':
+        result = 3;
+        break;
+      }
+      return result;
+    }
+
     // Initialize containers.
     const gear = [];
-    var enc = 0;
 
     // Iterate through items, allocating to containers
     for (let i of context.items) {
       i.img = i.img || DEFAULT_TOKEN;
       // Append to gear.
-      if (i.type === 'armor' || i.type === 'weapon' || i.type === 'item') {
+      if (i.type === 'armor' || i.type === 'weapon' || i.type === 'item' || i.type === 'effect') {
         gear.push(i);
-        enc += i.data.slots;
       }
+      gear.sort(function(a, b){
+        return _getItemRank(a) - _getItemRank(b);
+      });
     }
 
     // Assign and return
     context.gear = gear;
-    context.enc = enc;
-   }
+  }
+
+  
 
   /* -------------------------------------------- */
 

@@ -23,7 +23,7 @@
         <div class="resource flex-group-center">
           <label for="data.encumbrance" class="resource-label">Encombrement</label>
           <div class="resource-content flexrow flex-center flex-between">
-            <span name="enc">{{enc}}</span>
+            <span name="data.encumbrance.value">{{data.encumbrance.value}}</span>
             <span>/</span>
             <span name="data.encumbrance.max">{{data.encumbrance.max}}</span>
           </div>
@@ -65,11 +65,11 @@
               <h4 class="ability-name flex2" title="{{ability.label}}">
                 {{ability.label}}
               </h4>
-              <span class="ability-bonus flex1" name="data.abilities.{{key}}.value">{{ability.value}}</span>
-              <div class="ability-rollable rollable-d20 {{ability.key}}-{{ability.key}}-{{ability.key}}-{{ability.key}}" data-label="{{ability.label}}" data-roll="d20+@abilities.{{key}}.value"></div>
-              <div class="ability-rollable rollable-d6 {{ability.key}}-{{ability.key}}-{{ability.key}}" data-label="{{ability.label}}" data-roll="d20+@abilities.{{key}}.value+1d6"></div>
-              <div class="ability-rollable rollable-d6 {{ability.key}}-{{ability.key}}" data-label="{{ability.label}}" data-roll="d20+@abilities.{{key}}.value+2d6"></div>
-              <div class="ability-rollable rollable-d6 {{ability.key}}" data-label="{{ability.label}}" data-roll="d20+@abilities.{{key}}.value+3d6"></div>
+              <span class="ability-bonus flex1" name="data.abilities.{{key}}.mod">{{ability.value}} ({{ability.mod}})</span>
+              <div class="ability-rollable rollable-d20 {{ability.key}}-{{ability.key}}-{{ability.key}}-{{ability.key}}" data-label="{{ability.label}}" data-roll="d20+@abilities.{{key}}.mod"></div>
+              <div class="ability-rollable rollable-d6 {{ability.key}}-{{ability.key}}-{{ability.key}}" data-label="{{ability.label}}" data-roll="d20+@abilities.{{key}}.mod+1d6"></div>
+              <div class="ability-rollable rollable-d6 {{ability.key}}-{{ability.key}}" data-label="{{ability.label}}" data-roll="d20+@abilities.{{key}}.mod+2d6"></div>
+              <div class="ability-rollable rollable-d6 {{ability.key}}" data-label="{{ability.label}}" data-roll="d20+@abilities.{{key}}.mod+3d6"></div>
             </div>
           </div>
           {{/each}}

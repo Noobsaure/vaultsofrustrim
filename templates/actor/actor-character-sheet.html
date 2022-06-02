@@ -65,7 +65,7 @@
               <h4 class="ability-name flex2" title="{{ability.label}}">
                 {{ability.label}}
               </h4>
-              <span class="ability-bonus flex1" name="data.abilities.{{key}}.mod">{{ability.value}} ({{ability.mod}})</span>
+              <span class="ability-bonus flex1" name="data.abilities.{{key}}.mod">{{ability.value}}{{#if (subtract ability.mod ability.value)}} ({{ability.mod}}){{/if}}</span>
               <div class="ability-rollable rollable-d20 {{ability.key}}-{{ability.key}}-{{ability.key}}-{{ability.key}}" data-label="{{ability.label}}" data-roll="d20+@abilities.{{key}}.mod"></div>
               <div class="ability-rollable rollable-d6 {{ability.key}}-{{ability.key}}-{{ability.key}}" data-label="{{ability.label}}" data-roll="d20+@abilities.{{key}}.mod+1d6"></div>
               <div class="ability-rollable rollable-d6 {{ability.key}}-{{ability.key}}" data-label="{{ability.label}}" data-roll="d20+@abilities.{{key}}.mod+2d6"></div>

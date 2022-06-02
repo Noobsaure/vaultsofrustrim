@@ -67,6 +67,10 @@ Handlebars.registerHelper('toLowerCase', function(str) {
   return str.toLowerCase();
 });
 
+Handlebars.registerHelper('subtract', function(a, b) {
+  return a - b;
+});
+
 Handlebars.registerHelper('ifNew', function(a, b, options) {
   if (a && a[b]) {
     return options.fn(this);
